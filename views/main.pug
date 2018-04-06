@@ -1,0 +1,410 @@
+extends layout
+
+block content
+    nav.side-navbar
+        .side-navbar-wrapper
+            .sidenav-header.d-flex.align-items-center.justify-content-center
+                .sidenav-header-inner.text-center
+                    img(src='/img/avatar-1.jpg',alt='person').img-fluid.rounded-circle
+                    h2.h5 Anderson Hardy
+                        span Web Devloper
+                .sidenav-header-log
+                    a(href='/main').brand-small.text-center
+                        strong B
+                        strong.text-primary D
+        .main-menu
+            h5.sidenav-heading Main
+            ul#side-main-menu.side-menu.list-unstyled
+                li
+                    a(href='/main')
+                        i.icon-home
+                        | Home
+                li
+                    a(href='#')
+                        i.icon-form
+                        | Forms
+                li
+                    a(href='#')
+                        i.fa.fa-bar-chart
+                        | Charts
+                li
+                    a(href='#exampledropdownDropdown', aria-expanded='false', data-toggle='collapse')
+                        i.icon-interface-windows
+                        | Example dropdown
+                    ul#exampledropdownDropdown.collapse.list-unstyled
+                        li: a(href='#') Page
+                        li: a(href='#') Page
+                        li: a(href='#') Page
+
+        .admin-menu
+            h4.sidenav-heading Second menu
+            ul#side-admin-menu.side-menu.list-unstyled
+                li
+                    a(href='#')
+                        i.icon-screen
+                        | Demo
+                li
+                    a(href='#')
+                        i.icon-flask
+                        | Demo
+                        .badge.badge-info Special
+                li
+                    a(href='#')
+                        i.icon-flask
+                        | Demo
+                li
+                    a(href='#')
+                        i.icon-picture
+                        | Demo
+    .page
+        header.header
+            nav.navbar
+                .container-fluid
+                    .navbar-holder.d-flex.align-items-center.justify-content-between
+                        .navbar-header
+                            a(href='#')#toggle-btn.menu-btn
+                                i.icon-bars
+                            a(href='index.html').navbar-brand
+                                .brand-text.d-none.d-md-inline-block
+                                    span Bootstrap
+                                    strong.text-primary Dashboard
+                        ul.nav-menu.list-unstyled.d-flex.flex-md-row.align-items-md-center
+                            li.nav-item.dropdown
+                                a(href='#',rel='nofollow',data-target='#',data-toggle='dropdown',aria-haspopup='true',aria-expanded='false').nav-link
+                                    i.fa.fa-bell
+                                    span.badge.badge-warning 12
+                                ul(aria-labelledby='notifications').dropdown-menu
+                                    li: a(href='#',rel='nofollow').dropdown-item
+                                            .notification.d-flex.justify-content-between
+                                                .notification-content
+                                                    i.fa.fa-envelope
+                                                    | You have 6 new messages
+                                                .notification-time
+                                                    small 4 minutes ago
+                                    li: a(href='#',rel='nofollow').dropdown-item
+                                            .notification.d-flex.justify-content-between
+                                                .notification-content
+                                                    i.fa.fa-twitter
+                                                    | You have 2 followers
+                                                .notification-time
+                                                    small 4 minutes ago
+                                    li: a(href='#',rel='nofollow').dropdown-item
+                                            .notification.d-flex.justify-content-between
+                                                .notification-content
+                                                    i.fa.fa-upload
+                                                    | Server Rebooted
+                                                .notification-time
+                                                    small 4 minutes ago
+                                    li: a(href='#',rel='nofollow').dropdown-item
+                                            .notification.d-flex.justify-content-between
+                                                .notification-content
+                                                    i.fa.fa-twitter
+                                                    | You have 2 followers
+                                                .notification-time
+                                                    small 10 minutes ago
+                                    li: a(href='#',rel='nofollow').dropdown-item.all-notifications.text-center
+                                            strong
+                                                i.fa.fa-bell
+                                                | view all notifications
+                                    li.nav-item.dropdown
+                                        a(href='#',rel='nofollow',data-target='#',data-toggle='dropdown',aria-haspopup='true',aria-expanded='false').nav-link
+                                            i.fa.fa-envelope
+                                            span.badge.badge-info 10
+                                        ul(aria-labelledby='notifications').dropdown-menu
+                                            li: a(href='#',rel='nofollow').dropdown-item.d-flex
+                                                    .msg-profile
+                                                        img(src='/img/avatar-1.jpg',alt='...').img-fluid.rounded-circle
+                                                    .msg-body
+                                                        h3.h5 Frank Williams
+                                                        span sent you a direct message
+                                                        small 3 days ago at 7:58 pm - 10.06.2014
+                                            li: a(href='#',rel='nofollow').dropdown-item.d-flex
+                                                .msg-profile
+                                                    img(src='/img/avatar-3.jpg',alt='...').img-fluid.rounded-circle
+                                                .msg-body
+                                                    h3.h5 Ashley Wood
+                                                    span sent you a direct message
+                                                    small 3 days ago at 7:58 pm - 10.06.2014
+                                            li: a(href='#',rel='nofollow').dropdown-item.all-notifications.text-center
+                                                    strong: i.fa.fa-envelope
+                                                            | Read all messages
+                                    li.nav-item.dropdown
+                                        a(href='#',data-target='#',data-toggle='dropdown',aria-haspopup='true',aria-expanded='false').nav-link.language.dropdown-toggle
+                                            img(src='/img/flags/16/GB.png',alt='English')
+                                            span.d-none.d-sm-inline-block English
+                                        ul(aria-labelledby='language').dropdown-menu
+                                            li: a(href='#',rel='nofollow').dropdown-item
+                                                    img(src='/img/flags/16/DE.png',alt='English').mr-2
+                                                    span German
+                                            li: a(href='#',rel='nofollow').dropdown-item
+                                                    img(src='/img/flags/16/FR.png',alt='English').mr-2
+                                                    span French
+                                    li.nav-item
+                                        a(href='login.html').nav-link.logout
+                                            span.d-none.d-sm-inline-block Logout
+        section.dashboard-counts.section-padding
+            .container-fluid
+                .row
+                    .col-xl-2.col-md-4.col-6
+                        .wrapper.count-title.d-flex
+                            .icon: i.icon-user
+                            .name
+                                strong.text-uppercase New Clients
+                                span Last 7 days
+                                .count-number 25
+                    .col-xl-2.col-md-4.col-6
+                        .wrapper.count-title.d-flex
+                            .icon: i.icon-padnote
+                            .name
+                                strong.text-uppercase Work Orders
+                                span Last 5 days
+                                .count-number 400
+                    .col-xl-2.col-md-4.col-6
+                        .wrapper.count-title.d-flex
+                            .icon: i.icon-bill
+                            .name
+                                strong.text-uppercase New Invoices
+                                span Last 2 days
+                                .count-number 123
+                    .col-xl-2.col-md-4.col-6
+                        .wrapper.count-title.d-flex
+                            .icon: i.icon-list
+                            .name
+                                strong.text-uppercase Open Cases
+                                span Last 3 months
+                                .count-number 92
+                    .col-xl-2.col-md-4.col-6
+                        .wrapper.count-title.d-flex
+                            .icon: i.icon-list-1
+                            .name
+                                strong.text-uppercase New Cases
+                                span Last 7 days
+                                .count-number 70
+
+        section.dashboard-header.section-padding
+            .container-fluid
+                .row.d-flex.align-items-md-stretch
+                    .col-lg-3.col-md-6
+                        .card.to-do
+                            .display.h4 To do List
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            ul.check-lists.list-unstyled
+                                li.d-flex.align-items-center
+                                    input(type='checkbox',name='list-1')#list-1.form-control-custom
+                                    label(for='list-1') Similique sunt in culpa qui officia
+                                li.d-flex.align-items-center
+                                    input(type='checkbox',name='list-2')#list-2.form-control-custom
+                                    label(for='list-2') Ed ut perspiciatis unde omnis iste
+                                li.d-flex.align-items-center
+                                    input(type='checkbox',name='list-3')#list-3.form-control-custom
+                                    label(for='list-3') At vero eos et accusamus et iusto
+                                li.d-flex.align-items-center
+                                    input(type='checkbox',name='list-4')#list-4.form-control-custom
+                                    label(for='list-4') Explicabo Nemo ipsam voluptatem
+                                li.d-flex.align-items-center
+                                    input(type='checkbox',name='list-5')#list-5.form-control-custom
+                                    label(for='list-5') Similique sunt in culpa qui officia
+                                li.d-flex.align-items-center
+                                    input(type='checkbox',name='list-6')#list-6.form-control-custom
+                                    label(for='list-6') At vero eos et accusamus et iusto
+                                li.d-flex.align-items-center
+                                    input(type='checkbox',name='list-7')#list-7.form-control-custom
+                                    label(for='list-7') Similique sunt in culpa qui officia
+                                li.d-flex.align-items-center
+                                    input(type='checkbox',name='list-8')#list-8.form-control-custom
+                                    label(for='list-8') Ed ut perspiciatis unde omnis iste
+                    .col-lg-3.col-md-6
+                        .card.project-progress
+                            h2.display.h4 Project Beta progress
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            .pie-chart
+                                canvas(width='300',height='300')#pieChart
+                    .col-lg-6.col-md-12.flex-lg-last.flex-md-first.align-self-baseline
+                        .card.sales-report
+                            h2.display.h4 Sales marketing report
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet officiis
+                            .fa-line-chart
+                                canvas#lineChart
+        section.statistics
+            .container-fluid
+                .row.d-flex
+                    .col-lg-4
+                        .card.income.text-center
+                            .icon: i.icon-line-chart
+                            .number 126,418
+                            strong.text-primary All Income
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
+                    .col-lg-4
+                        .card.data-usage
+                            h2.display.h4 Monthly Usage
+                            .row.d-flex.align-item.center
+                                .col-sm-6
+                                    #progress-circle.d-flex.align-items-center.justify-content-center
+                                .col-sm-6
+                                    strong.text-primary 80.56 GB
+                                    small Current Plan
+                                    span 100 Gb Monthly
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing.
+                    .col-lg-4
+                        .card.user-activity
+                            h2.display.h4 User Activity
+                            .number 210
+                            h3.h4.display Social Users
+                            .progress
+                                div(role='progressbar',style='width:25%',aria-valuenow='25',aria-valuemin='0',aria-valuemax='100').progress-bar.bg-primary
+                            .page-statistics.d-flex.justify-content-between
+                                .page-statistics-left
+                                    span Pages Visits
+                                    strong 230
+                                .page-statistics-right
+                                    span New Visits
+                                    strong 73.4%
+        section.mt-30px.mb-30px
+            .container-fluid
+                .row
+                    .col-lg-4.col-md-12
+                        #new-updates.card.updates.recent-updated
+                            #updates-header.card-header.d-flex.justify-content-between.align-items-center
+                                h2.h5.display
+                                    a(href='#update-box',data-toggle='collapse',data-parent='#new-updates',aria-expanded='true',aria-controls='updates-box') News Updates
+                                a(href='#updates-box',data-toggle='collapse',data-parent='#new-updates',aria-expanded='true',aria-controls='updates-box')
+                                    i.fa.fa-angle-down
+                        div(rol='tabpanel')#updates-box.collapse.show
+                            ul.news.list-unstyled
+                                li.d-flex.justify-content-between
+                                    .left-col.d-flex
+                                        .icon: i.icon-rss-fedd
+                                        .title
+                                            strong Lorem ipsum dolor sit amet.
+                                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                                    .right-col.text-right
+                                        .update-date 24<span class='month'>Jan</span>
+                                li.d-flex.justify-content-between
+                                    .left-col.d-flex
+                                        .icon: i.icon-rss-feed
+                                        .title
+                                            strong Lorem ipsum dolor sit amet.
+                                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                                    .right-col.text-right
+                                        .update-date 24<span class='month'>Jan</span>
+                                li.d-flex.justify-content-between
+                                    .left-col.d-flex
+                                        .icon: i.icon-rss-feed
+                                        .title
+                                            strong Lorem ipsum dolor sit amet.
+                                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                                    .right-col.text-right
+                                        .update-date 24<span class='month'>Jan</span>
+                                li.d-flex.justify-content-between
+                                    .left-col.d-flex
+                                        .icon: i.icon-rss-feed
+                                        .title
+                                            strong Lorem ipsum dolor sit amet.
+                                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                                    .right-col.text-right
+                                        .update-date 24<span class='month'>Jan</span>
+                                li.d-flex.justify-content-between
+                                    .left-col.d-flex
+                                        .icon: i.icon-rss-feed
+                                        .title
+                                            strong Lorem ipsum dolor sit amet.
+                                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+                                    .right-col.text-right
+                                        .update-date 24<span class='month'>Jan</span>
+                    .col-lg-4.col-md-6
+                        #daily-feeds.card.updates.daily-feeds
+                            #fedds-header.card-header.d-flex.justify-content-between.align-items-center
+                                h2.h5.display
+                                    a(href='feeds-box',data-toggle='collapse',data-parent='#daily-feeds',aria-expanded='true',aria-controls='feeds-box') Your daily Feeds
+                            .right-column
+                                .badge.badge-primary 10 messages
+                                a(href='#feeds-box',data-toggle='collapse',data-parent='#daily-feeds',aria-expanded='true',aria-controls='feeds-box')
+                                    i.fa.fa-angle-down
+                            div(role='tabpanel')#feeds-box.collapse.show
+                                 .feed-box
+                                     .feed-elements.list-unstyled
+                                        li.clearfix
+                                            .feed.d-flex.justify-content-between
+                                                .feed-body.d-flex.justify-content-between
+                                                    a(href='#').feed-profile
+                                                        img(src='/img/avatar-5.jpg', alt='person').img-fluid.rounded-circle
+                                                    .content
+                                                        strong Aria Smith
+                                                        small Posted a new blog
+                                                        .full-date: small Today 5:60 pm - 12.06.2014
+                                                .date: small 5min ago
+                                        li.clearfix
+                                             .feed.d-flex.justify-content-between
+                                                 .feed-body.d-flex.justify-content-between
+                                                     a(href='#').feed-profile
+                                                         img(src='/img/avatar-2.jpg', alt='person').img-fluid.rounded-circle
+                                                     .content
+                                                         strong Frank Williams
+                                                         small Posted a new blog
+                                                         .full-date: small Today 5:60 pm - 12.06.2014
+                                                         .CTAs
+                                                             a(href='#').btn.btn-x.btn-dark
+                                                                i.fa.fa-thumbs-up
+                                                                | Like
+                                                             a(href='#').btn.btn-x.btn-dark
+                                                                i.fa.fa-heart
+                                                                | Love
+                                                 .date: small 5min ago
+                                        li.clearfix
+                                             .feed.d-flex.justify-content-between
+                                                 .feed-body.d-flex.justify-content-between
+                                                     a(href='#').feed-profile
+                                                         img(src='/img/avatar-1.jpg', alt='person').img-fluid.rounded-circle
+                                                     .content
+                                                         strong Aria Smith
+                                                         small Posted a new blog
+                                                         .full-date: small Today 5:60 pm - 12.06.2014
+                                                 .date: small 5min ago
+                                             .message-card
+                                                 small
+                                                 | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                 | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                                 | Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                             .CTAs.pull-right
+                                                 a(href='#').btn-btn-xs.btn-dark
+                                                    i.fa.fa-thumbs-up
+                                                    | Like
+                    .col-lg-4.col-md-6
+                        #recent-activites-wrapper.card.updates.activities
+                            #activities-header.card-header.d-flex.justify-content-between.align-items-center
+                                h2.h5.display
+                                    a(href='#activities-box',data-toggle='collapse',data-parent='#recent-activities-wrapper',aria-expanded='true',aria-controls='activities-box') Recent Activities
+                                a(href='#activities-box',data-toggle='collapse',data-parent='#recent-activities-wrapper',aria-expanded='true',aria-controls='activities-box')
+                                    i.fa.fa-angle-down
+                            div(role='tabpanel')#activities-box.collapse.show
+                                ul.activities.list-unstyled
+                                    li
+                                        .row
+                                            .col-4.date-holder.text-right
+                                                .icon: i.icon-clock
+                                                .date
+                                                    span 6:00 am
+                                                    span.text-info 6 hours ago
+                                            .col-8.content: strong Meeting
+                                                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                                    li
+                                        .row
+                                            .col-4.date-holder.text-right
+                                                .icon: i.icon-clock
+                                                .date
+                                                    span 6:00 am
+                                                    span.text-info 6 hours ago
+                                            .col-8.content: strong Meeting
+                                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+        footer.main-footer
+            .container-fluid
+                .row
+                    .col-sm-6
+                        p Your company &copy; 2017-2019
+                    .col-sm-6.text-right
+                        p Design by <a href="https://bootstrapious.com" class="external">Bootstrapious</a>
+block append scripts
+    script(src='/vendor/chart.js/Chart.min.js')
+        script(src='/js/grasp_mobile_progress_circle-1.0.0.min.js')
+        script(src='/js/charts-home.js')
+        script(src='/js/front.js')

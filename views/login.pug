@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    div.page.login-page
+        div.container
+            div.form-outer.text-center.d-flex.align-items-center
+                div.form-inner
+                    div.logo.text-uppercase
+                        span MegaTester
+                        strong.text-primary Login
+                    form(method='post')#loginForm
+                        div.form-group-material
+                            input(type='text',name='email',autocomplete="off",required)#loginUserName.input-material
+                            label(for='loginUserName').label-material Username
+                        div.form-group-material
+                            input(type='password',name='password',autocomplete="off",required)#loginPassword.input-material
+                            label(for='loginPassword').label-material Password
+                        button(type='submit')#login.btn.btn-primary Login
+                    a(href='#').forgot-pass Forgot Password?
+                    small Do not have an account?
+                    a(href='register.html' class='signup') Signup
+                div.copyrights.text-center
+                    p esign by <a href="https://bootstrapious.com" class="external">Bootstrapious</a>
+block append scripts
+    script(src='./js/modules/deparam/build/deparam.min.js')
+    script(src='/js/views/login.js')

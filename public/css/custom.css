@@ -1,0 +1,7 @@
+/* your styles go here */
+.hidden{
+	display: none;
+}
+.login-page .form-inner {
+	width : 100%
+}

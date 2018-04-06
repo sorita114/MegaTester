@@ -1,0 +1,25 @@
+doctype html
+html(lang='ko')
+    head
+        block head
+            meta(charset='utf-8')
+            meta(http-equiv='X-UA-Compatible', content='IE=edge')
+            meta(name='viewport', content='width=device-width, initial-scale=1')
+            title= title
+            link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
+            link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
+            link(rel='stylesheet', href='/css/fontastic.css')
+            link(rel='stylesheet', href='/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css')
+            link(rel='stylesheet', href='/css/style.default.css')
+            link(rel='stylesheet', href='/css/custom.css')
+    body
+        block content
+        block scripts
+            script(src='/vendor/jquery/jquery.min.js')
+            script(src='/vendor/popper.js/umd/popper.min.js')
+            script(src='/vendor/bootstrap/js/bootstrap.min.js')
+            script(src='/vendor/jquery-validation/jquery.validate.min.js')
+            script(src='/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')
+            script(src='/vendor/jquery.cookie/jquery.cookie.js')
+
+
